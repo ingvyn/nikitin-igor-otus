@@ -10,4 +10,4 @@ Script executing may be called by
 npm run fstree -- <pathToFolder>
 ```
 
-<pathToFolder> can be relative or absolute.
+pathToFolder can be relative or absolute.
