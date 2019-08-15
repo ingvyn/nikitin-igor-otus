@@ -17,7 +17,14 @@ async function getFsTree(argPath) {
     if (items[j].isFile()) fsTree.files.push(currentPath);
   }
 }
+const errHandle = err => {
+  if (err.code === 'ENOENT' || err.code === 'ENOTDIR') {
+    console.log(`Ошибка: Директория ${err.path} не существует`);
+  } else if (err.code === 'EPERM') {
+    console.log(`Ошибка: Доступ к папке ${err.path} ограничен средствами ОС`);
+  } else console.log(`Произошла ошибка ${err.message}`);
+};
 
 getFsTree(initPath)
   .then(() => console.log(fsTree))
-  .catch(error => console.log(error));
+  .catch(error => errHandle(error));
