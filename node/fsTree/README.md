@@ -1,4 +1,4 @@
-#Usage
+# Usage
 
 ```cmd
 node fstree <pathToFolder>
