@@ -37,14 +37,8 @@ getPath = elem => {
     let relativeSelectorElem = fromAncestorUnique(elem)
       ? `${selectorAncestorElem} ${selectorElem}`
       : inChildUnique(elem)
-      ? `${getPathFromAncestor(
-          elem.parentElement,
-          ancestorElem
-        )} > ${selectorElem}`
-      : `${getPathFromAncestor(
-          elem.parentElement,
-          ancestorElem
-        )} > ${elem.tagName.toLowerCase()}:nth-child(${numInChild(elem)})`;
+      ? `${getPathFromAncestor(elem.parentElement, ancestorElem)} > ${selectorElem}`
+      : `${getPathFromAncestor(elem.parentElement, ancestorElem)} > ${elem.tagName.toLowerCase()}:nth-child(${numInChild(elem)})`;
     return relativeSelectorElem;
   };
 
