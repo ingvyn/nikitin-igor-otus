@@ -8,7 +8,7 @@ getPath = elem => {
     if (elem.id !== '') {
       selector = `${tag}#${elem.id}`;
     } else if (elem.className !== '') {
-      selector = `${tag}.${elem.className.replace(/\s+/g, '.')}`;
+       selector = `${tag}.${elem.className.trim().split(/\s+/).join('.')}`;
     }
     return selector;
   };
