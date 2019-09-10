@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+    my-tree {
+      display: block;
+      list-style-type: none;
+      margin-left: 1em;
+      padding: 0;
+      font-weight: 1.2em;
+    }
+
+    my-tree my-tree {
+      padding-top: 4px;
+      margin-left: 2.8em;
+      border-left: 1px solid;
+      border-left-color: darkgreen;
+    }
+    my-tree > span {
+      box-sizing: border-box;
+      padding-left: 4px;
+      display: inline-block;
+      border-bottom: 1px solid;
+      border-bottom-color: darkgreen;
+    }
+    my-tree > my-leaf {
+      display: block;
+      padding-top: 20px;
+      padding-bottom: 4px;
+      padding-left: 0.5em;
+      margin-left: 0em;
+      font-weight: 1em;
+    }
+    my-leaf > span {
+      border: 2px rgb(233, 236, 52) dotted;
+    }
+  </style>
+  <body>
+    <script src="./customDefine.js"></script>
+  </body>
+</html>
